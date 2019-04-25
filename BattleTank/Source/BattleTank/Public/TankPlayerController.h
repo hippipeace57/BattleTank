@@ -7,17 +7,21 @@
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
 
-/**
- * 
- */
+
+
+
 UCLASS()
 class BATTLETANK_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	
 	private:
+		virtual void BeginPlay() override;
+		virtual void Tick(float DeltaTime) override;
+
 		ATank* GetControlledTank() const;
 
-		void BeginPlay() override;
+		//Start moving the tank barrel so it will shoot at the crosshair
+		void AimTowardsCrosshair();
 	
 };

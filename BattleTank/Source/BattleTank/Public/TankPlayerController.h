@@ -23,5 +23,8 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 
 		//Start moving the tank barrel so it will shoot at the crosshair
 		void AimTowardsCrosshair();
+
+		//Return an out Parameter, true if hit landscape
+		bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 	
 };

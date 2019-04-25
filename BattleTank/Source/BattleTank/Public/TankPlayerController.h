@@ -26,5 +26,12 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 
 		//Return an out Parameter, true if hit landscape
 		bool GetSightRayHitLocation(FVector& OutHitLocation) const;
+
+
+		UPROPERTY(EditAnywhere)
+		float CrosshairXLocation = .5f;
+
+		UPROPERTY(EditAnywhere)
+		float CrosshairYLocation = .33333f;
 	
 };
